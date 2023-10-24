@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background-image: url(./assets/img/violet_bg.png);
+}
+
+.header{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    list-style-type: none;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+}
+
+.logo{
+    height: 50px;
+}
+
+.input-box{
+    margin-top: 3px;
+    line-height: 40px;
+    margin-left: 120px;
+    width: 500px;
+    margin-right: 120px;
+}
+
+.log{
+    margin-top: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: aqua;
+}
+
+
+
+.nav-list{
+    margin-top: 0px;
+    display: flex;
+    list-style-type: none;
+    height: 50px;
+    background-color: rgb(127, 142, 168);
+}
+
+.nav-list > li{
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-weight: 800;
+    cursor: pointer;
+    width: 150px;
+    line-height: 50px;
+    margin-left: 50px;
+}
+
+.sub-type-comic{
+    display: none;
+    background-color: rgb(232, 252, 251);
+    width: 100%;
+    margin-left: -40px;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.type-comic:hover .sub-type-comic{
+    display: block;
+}
+
+
+.vn-comic, .cn-comic, .kr-comic{
+    text-decoration: none;
+}
+
+
+.vn-comic, .cn-comic, .kr-comic:active{
+    color: none;
+}
+
+
