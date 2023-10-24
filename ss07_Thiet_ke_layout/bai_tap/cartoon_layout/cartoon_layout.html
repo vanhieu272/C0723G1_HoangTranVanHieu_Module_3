@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body{
+        background-color: #f1f1f1;
+      }
+
+      .row {
+        /*cho phép thẻ div (col) nổi lên trên*/
+        display: flex;
+        /*Các thẻ div (col)  không đủ chỗ chứa trên 1 hàng thì rớt xuống*/
+        flex-wrap: wrap;
+      }
+
+      ul{
+        list-style: none;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+    .col-l-1 {width: 8.33333%;}
+    .col-l-2 {width: 16.66667%;}
+    .col-l-3 {width: 25%;}
+    .col-l-4 {width: 33.33333%;}
+    .col-l-5 {width: 41.66667%;}
+    .col-l-6 {width: 50%;}
+    .col-l-7 {width: 58.33333%;}
+    .col-l-8 {width: 66.66667%;}
+    .col-l-9 {width: 75%;}
+    .col-l-10 {width: 83.33333%;}
+    .col-l-11 {width: 91.66667%;}
+    .col-l-12 {width: 100%;}
+
+    .header{
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #d8d8d8;
+    }
+
+    .header img{
+        height: 50px;
+    }
+
+    .nav-bar{
+        justify-content: center;
+        background-color: #d8d8d8;
+        margin: 8px 0;
+    }
+
+    .nav-bar ul {
+        display: flex;
+    }
+
+    .nav-bar ul li{
+        margin: 0 24px;
+    }
+
+    .nav-bar ul li a{
+        color: black;
+    }
+
+    .left{
+        padding: 8px;
+        background-color: #d8d8d8;
+    }
+
+    .right{
+        padding: 8px 16px;
+    }
+
+    .left iframe{
+        
+        width: 100%;
+        height: 240px;
+    }
+
+    .right iframe{
+        
+        width: 100%;
+        height: 540px;
+    }
+
+    span{
+        color: rgb(125, 125, 125);
+    }
+
+    .footer{
+        margin-top: 8px;
+        background-color: #d8d8d8;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row header">
+            <img src="https://cdn.hanoi.codegym.vn/wp-content/uploads/sites/7/2022/05/logor.jpg" alt="logo">
+        </div>
+
+        <div class="row nav-bar">
+            <ul>
+                <li><a href="#">Phim hoạt hình</a></li>
+                <li>|</li>
+                <li><a href="#">Phim hoạt hình yêu thích</a></li>
+                <li>|</li>
+                <li><a href="#">Nhân vật hoạt hình</a></li>
+                <li>|</li>
+                <li><a href="#">Góp ý</a></li>
+            </ul>
+        </div>
+        <div class="row main">
+            <div class="col-l-3 left">
+                <iframe src="https://www.youtube.com/embed/JrDjWrXeDI4" title="[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH - <span>5.437.876 lượt xem</span></p>
+                <span>Trâu Review</span>
+                <iframe src="https://www.youtube.com/embed/JrDjWrXeDI4" title="[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH - <span>5.437.876 lượt xem</span></p>
+                <span>Trâu Review</span>
+                <iframe src="https://www.youtube.com/embed/JrDjWrXeDI4" title="[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH - <span>5.437.876 lượt xem</span></p>
+                <span>Trâu Review</span>
+                <iframe src="https://www.youtube.com/embed/JrDjWrXeDI4" title="[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH - <span>5.437.876 lượt xem</span></p>
+                <span>Trâu Review</span>
+            </div>
+            <div class="col-l-9 right">
+                <iframe src="https://www.youtube.com/embed/JrDjWrXeDI4" title="[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>[FULL BỘ] TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH - <span>5.437.876 lượt xem</span></p>
+                <span>Trâu Review</span>
+                <span>60.224 lượt xem  20 thg 10, 2023  #reviewtruyentranh #tomtattruyentranh #traudireview
+                    TỪ PHÀM NHÂN TU TIÊN, TA ĐẮC ĐẠO TRỞ THÀNH HUYỀN MÔN BANG CHỦ | REVIEW TRUYỆN TRANH
+                    TÊN TRUYỆN: ĐẠI ĐẠO TRANH PHONG
+                    AE ỦNG HỘ TRÂU TẠI ĐÂY NHÉ
+                    Momo: 0369349286 - PHAM NGOC ANH
+                    tpbank: 00117119001 - PHAM NGOC ANH
+                    #reviewtruyentranh
+                    #tomtattruyentranh
+                    #traudireview
+                    -------------------------------------------------------
+                    ♡ Cảm ơn các bạn đã xem video video của mình.
+                    ♡ Đừng quên like và subscribe cho mình nếu các bạn thích nha!
+                    -------------------------------------------------------
+                    * Trâu Đi Review không sở hữu tất cả các tư liệu trong video mà tuân thủ luật bản quyền và sử dụng hợp lý luật Fair-Use (https://www.youtube.com/yt/copyright/)
+                    All Music , Pictures, Videos and Sounds That Appear In This Video Are Owned By Their Respective Owners
+                    "Copyright Disclaimer, Under Section 107 of the Copyright Act 1976, allowance is made for 'fair use' for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use."</span>
+            </div>
+        </div>
+        <div class="footer">
+            © 2023 - Thiết kế bởi Hiếu Hoàng
+        </div>
+    </div>
+</body>
+</html>
