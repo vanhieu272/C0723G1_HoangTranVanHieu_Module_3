@@ -10,6 +10,10 @@
         text-decoration: none !important;
     }
 
+    a:hover{
+        text-decoration: underline !important;
+    }
+
     .hot-product{
         display: flex; justify-content: space-between; padding-left: 0;
     }
@@ -25,6 +29,10 @@
     .hot-product li:hover a{
         transform:scale(120%);
         text-decoration: underline !important;
+    }
+
+    ._footer a{
+        color: #6f7171;
     }
 </style>
 <head>
@@ -43,16 +51,16 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg p-0">
+<nav class="navbar navbar-expand-lg p-0 mx-5">
     <div class="container-fluid">
-        <a class="navbar-brand pe-4" style="border-right: solid 2px" href="#"><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt=""></a>
+        <a class="navbar-brand pe-4" style="border-right: solid 2px" href="#"><img style="height: 4vh; " src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Surface</a>
+                    <a class="nav-link active fw-bolder" aria-current="page" href="#">Surface</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -102,7 +110,7 @@
                     <a class="nav-link" aria-current="page" href="#">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border border-primary bg-primary rounded-2" aria-current="page" href="#">SHOP DEALS</a>
+                    <button class="btn btn-primary" href="#">SHOP DEALS</button>
                 </li>
             </ul>
 
@@ -266,7 +274,7 @@
     </div>
 </div>
 
-<div class="row ps-5 mt-5 pt-5" style="background-color: #E2E3E5">
+<div class="row ps-5 mt-5 pt-5 _footer" style="background-color: #E2E3E5">
     <table class="table table-secondary table-borderless">
         <tr>
             <th>What's new</th>
