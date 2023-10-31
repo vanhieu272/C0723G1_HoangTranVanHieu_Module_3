@@ -73,7 +73,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = this.productService.showDetail(id);
+        Product product = productService.showDetail(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");
@@ -160,7 +160,7 @@ public class ProductServlet extends HttpServlet {
         String producer = request.getParameter("producer");
         int id = (int) (Math.random() * 10000);
         Product product = new Product(id, name, price, description, producer);
-        this.productService.save(product);
+        productService.save(product);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/create.jsp");
         request.setAttribute("mess", "Added Success");
         try {
@@ -176,7 +176,7 @@ public class ProductServlet extends HttpServlet {
         int price = Integer.parseInt(request.getParameter("price"));
         String description = request.getParameter("description");
         String producer = request.getParameter("producer");
-        Product product = this.productService.showDetail(id);
+        Product product = productService.showDetail(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");
@@ -185,7 +185,7 @@ public class ProductServlet extends HttpServlet {
             product.setPrice(price);
             product.setDescription(description);
             product.setProducer(producer);
-            this.productService.update(product);
+            productService.update(product);
             request.setAttribute("product", product);
             request.setAttribute("mess", "Edited Success!!");
             requestDispatcher = request.getRequestDispatcher("view/product/edit.jsp");
