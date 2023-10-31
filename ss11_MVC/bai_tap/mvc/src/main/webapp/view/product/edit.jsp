@@ -64,8 +64,8 @@
             </tr>
 
             <tr>
-                <td></td>
                 <td><input type="submit" value="Update product"></td>
+                <td><a href="/product">Back</a></td>
             </tr>
         </table>
     </fieldset>

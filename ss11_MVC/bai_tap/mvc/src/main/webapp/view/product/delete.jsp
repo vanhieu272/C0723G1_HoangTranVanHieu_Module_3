@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <td><input type="submit" value="Delete product"></td>
-            <td><a href="/product">Back to product list</a></td>
+            <td><a href="/product">Back</a></td>
         </tr>
     </table>
 </form>

@@ -14,12 +14,12 @@
 <body>
 <h1>Product: ${name}</h1>
 
-<table border="1">
+<table style="border: 1px solid black">
     <tr>
         <td>Name</td>
         <td>Price</td>
-        <td>Note</td>
-        <td>Manufacturer</td>
+        <td>Description</td>
+        <td>Producer</td>
         <td>Detail</td>
         <td>Edit</td>
         <td>Delete</td>
@@ -28,8 +28,8 @@
         <tr>
             <td>${product.name}</td>
             <td>${product.price}</td>
-            <td>${product.note}</td>
-            <td>${product.manufacturer}</td>
+            <td>${product.description}</td>
+            <td>${product.producer}</td>
             <td><a href="/product?action=detail&id=${product.getId()}">Detail</a></td>
             <td><a href="/product?action=edit&id=${product.getId()}">Edit</a></td>
             <td><a href="/product?action=delete&id=${product.getId()}">Delete</a></td>

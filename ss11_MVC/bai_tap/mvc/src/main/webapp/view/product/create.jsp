@@ -73,6 +73,9 @@
             <tr>
                 <td><button type="submit">OK</button></td>
             </tr>
+            <tr>
+                <td><a href="/product">Back</a></td>
+            </tr>
         </table>
     </fieldset>
 </form>
