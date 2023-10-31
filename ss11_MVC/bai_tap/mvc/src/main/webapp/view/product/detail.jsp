@@ -16,20 +16,16 @@
 
 <table>
     <tr>
-        <td>Name: </td>
-        <td>${product.name}</td>
+        <td>Name: ${product.name}</td>
     </tr>
     <tr>
-        <td>Price: </td>
-        <td>${product.price}</td>
+        <td>Price: ${product.price}</td>
     </tr>
     <tr>
-        <td>Note: </td>
-        <td>${product.desciption}</td>
+        <td>Description: ${product.desciption}</td>
     </tr>
     <tr>
-        <td>Manufacturer: </td>
-        <td>${product.producer}</td>
+        <td>Producer: ${product.producer}</td>
     </tr>
     <tr>
             <a href="/product">Back</a>

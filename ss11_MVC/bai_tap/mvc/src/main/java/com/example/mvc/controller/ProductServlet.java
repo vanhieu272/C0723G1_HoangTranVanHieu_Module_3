@@ -22,23 +22,25 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
 
-        if(action == null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
-                showCreateForm(req,resp);
+                showCreateForm(req, resp);
                 break;
             case "edit":
-                showEditForm(req,resp);
+                showEditForm(req, resp);
                 break;
             case "delete":
-                showDeleteForm(req,resp);
+                showDeleteForm(req, resp);
                 break;
             case "detail":
-                showDetailProduct(req,resp);
+                showDetailProduct(req, resp);
+            case "search":
+                searchProduct(req, resp);
             default:
-                listProduct(req,resp);
+                listProduct(req, resp);
                 break;
         }
     }
@@ -103,6 +105,24 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
+    private void searchProduct(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        List<Product> productList = productService.findByName(name);
+        RequestDispatcher requestDispatcher;
+        if (productList == null) {
+            requestDispatcher = request.getRequestDispatcher("error404.jsp");
+        } else {
+            request.setAttribute("name", name);
+            request.setAttribute("productList", productList);
+            requestDispatcher = request.getRequestDispatcher("view/product/search.jsp");
+        }
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void listProduct(HttpServletRequest request, HttpServletResponse response) {
         List<Product> productList = productService.getAll();
         request.setAttribute("productList", productList);
@@ -132,13 +152,14 @@ public class ProductServlet extends HttpServlet {
                 break;
         }
     }
+
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
         int price = Integer.parseInt(request.getParameter("price"));
         String description = request.getParameter("description");
-        String producer= request.getParameter("producer");
+        String producer = request.getParameter("producer");
         int id = (int) (Math.random() * 10000);
-        Product product = new Product(id,name,price,description,producer);
+        Product product = new Product(id, name, price, description, producer);
         this.productService.save(product);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/create.jsp");
         request.setAttribute("mess", "Added Success");
