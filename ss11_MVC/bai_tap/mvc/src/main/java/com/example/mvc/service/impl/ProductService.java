@@ -31,8 +31,8 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Product showDetail(int id) {
-        return productRepository.showDetail(id);
+    public Product findById(int id) {
+        return productRepository.findById(id);
     }
 
     @Override

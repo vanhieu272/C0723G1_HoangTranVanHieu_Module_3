@@ -56,7 +56,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.showDetail(id);
+        Product product = productService.findById(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");
@@ -73,7 +73,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.showDetail(id);
+        Product product = productService.findById(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");
@@ -90,7 +90,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showDetailProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.showDetail(id);
+        Product product = productService.findById(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");
@@ -176,7 +176,7 @@ public class ProductServlet extends HttpServlet {
         int price = Integer.parseInt(request.getParameter("price"));
         String description = request.getParameter("description");
         String producer = request.getParameter("producer");
-        Product product = productService.showDetail(id);
+        Product product = productService.findById(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");
@@ -199,7 +199,7 @@ public class ProductServlet extends HttpServlet {
 
     private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.showDetail(id);
+        Product product = productService.findById(id);
         RequestDispatcher requestDispatcher;
         if (product == null) {
             requestDispatcher = request.getRequestDispatcher("error404.jsp");

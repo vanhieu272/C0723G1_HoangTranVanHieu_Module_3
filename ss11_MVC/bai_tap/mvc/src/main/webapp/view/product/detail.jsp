@@ -16,16 +16,16 @@
 
 <table>
     <tr>
-        <td>Name: ${product.name}</td>
+        <td>Name: ${product.getName()}</td>
     </tr>
     <tr>
-        <td>Price: ${product.price}</td>
+        <td>Price: ${product.getPrice()}</td>
     </tr>
     <tr>
-        <td>Description: ${product.desciption}</td>
+        <td>Description: ${product.getDescription()}</td>
     </tr>
     <tr>
-        <td>Producer: ${product.producer}</td>
+        <td>Producer: ${product.getProducer()}</td>
     </tr>
     <tr>
             <a href="/product">Back</a>
