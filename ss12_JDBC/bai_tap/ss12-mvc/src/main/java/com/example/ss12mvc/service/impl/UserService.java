@@ -35,4 +35,14 @@ public class UserService implements IUserService {
     public boolean updateUser(User user) throws SQLException {
         return userRepository.updateUser(user);
     }
+
+    @Override
+    public List<User> searchByCountry(String country) {
+        return userRepository.searchByCountry(country);
+    }
+
+    @Override
+    public List<User> orderByName() {
+        return userRepository.orderByName();
+    }
 }

@@ -15,7 +15,19 @@
 </head>
 <body>
 <h1>USER MANAGEMENT</h1>
+
 <a href="/user?action=create">Add new user</a>
+
+<form action="/user">
+    <input hidden="hidden" type="text" name="action" value="search">
+    <input type="text" name="country">
+    <button>Search by country</button>
+</form>
+
+<a href="/user">
+    <button>Order by name</button>
+</a>
+
 <form action="/user" method="post">
     <table class="table table-dark">
         <tr>

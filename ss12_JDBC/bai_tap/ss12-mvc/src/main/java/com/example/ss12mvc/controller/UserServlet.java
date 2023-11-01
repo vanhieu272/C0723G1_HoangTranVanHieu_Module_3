@@ -34,9 +34,38 @@ public class UserServlet extends HttpServlet {
             case "delete":
                 showDeleteForm(req, resp);
                 break;
+            case "search":
+                searchByCountry(req,resp);
+                break;
+            case "order":
+                orderByName(req,resp);
+                break;
             default:
                 showAll(req, resp);
                 break;
+        }
+    }
+
+    private void orderByName(HttpServletRequest req, HttpServletResponse resp) {
+        List<User> userList = userService.orderByName();
+        req.setAttribute("userList", userList);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("view/user/list.jsp");
+        try {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void searchByCountry(HttpServletRequest req, HttpServletResponse resp) {
+        String country = req.getParameter("country");
+        List<User> userList = userService.searchByCountry(country);
+        req.setAttribute("userList", userList);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("view/user/list.jsp");
+        try {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -103,6 +132,7 @@ public class UserServlet extends HttpServlet {
             case "delete":
                 deleteUser(req, resp);
                 break;
+
         }
     }
 
