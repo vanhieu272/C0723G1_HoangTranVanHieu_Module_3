@@ -24,7 +24,7 @@
     <button>Search by country</button>
 </form>
 
-<a href="/user">
+<a href="/user?action=order">
     <button>Order by name</button>
 </a>
 
