@@ -14,7 +14,7 @@
 <h1>Delete User</h1>
 <p><a href="/user">Back to User List</a> </p>
 
-<form action="/user?action=delete&id=${user.getId()}"method="post">
+<form action="/user?action=delete&id=${user.getId()}" method="post">
   <h3>Confirm delete</h3>
   <fieldset>
     <legend>Customer information</legend>

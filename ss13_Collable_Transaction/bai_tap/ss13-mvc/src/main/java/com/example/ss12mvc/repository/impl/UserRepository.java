@@ -346,9 +346,9 @@ public class UserRepository implements IUserRepository {
     public boolean deleteUserBySP(int id) {
         boolean rowDeleted;
         Connection connection = BaseRepository.getConnectDB();
-        String update_sp = "{CALL sp_delete_user(?)}";
+        String updateSp = "{call sp_delete_user(?)}";
         try {
-            CallableStatement callableStatement = connection.prepareCall(update_sp);
+            CallableStatement callableStatement = connection.prepareCall(updateSp);
             callableStatement.setInt(1, 1);
             callableStatement.executeUpdate();
             rowDeleted = callableStatement.executeUpdate() > 0;
